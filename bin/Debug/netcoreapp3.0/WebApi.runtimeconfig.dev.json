@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\medicosoft\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\medicosoft\\.nuget\\packages"
+    ]
+  }
+}
