@@ -30,3 +30,10 @@ C:\Users\medicosoft\Documents\repositorios\jwt\WebApi\obj\Debug\netcoreapp3.0\We
 C:\Users\medicosoft\Documents\repositorios\jwt\WebApi\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\medicosoft\Documents\repositorios\jwt\WebApi\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\medicosoft\Documents\repositorios\jwt\WebApi\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
+C:\Users\medicosoft\Documents\repositorios\jwt\WebApi\bin\Debug\netcoreapp3.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\medicosoft\Documents\repositorios\jwt\WebApi\bin\Debug\netcoreapp3.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\medicosoft\Documents\repositorios\jwt\WebApi\bin\Debug\netcoreapp3.0\Microsoft.OpenApi.dll
+C:\Users\medicosoft\Documents\repositorios\jwt\WebApi\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.dll
+C:\Users\medicosoft\Documents\repositorios\jwt\WebApi\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\medicosoft\Documents\repositorios\jwt\WebApi\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\medicosoft\Documents\repositorios\jwt\WebApi\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.SwaggerUI.dll

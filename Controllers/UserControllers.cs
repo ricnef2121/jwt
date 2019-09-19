@@ -34,7 +34,8 @@ namespace WebApi.Controllers
         [HttpGet]
        // [EnableCors("_MedicosoftOrigins")]
         public IActionResult GetAll()
-        {
+        {   
+            
             var users =  _userService.GetAll();
             return Ok(users);
         }

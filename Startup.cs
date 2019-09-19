@@ -15,6 +15,8 @@ using WebApi.Services;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.OpenApi.Models;
 
 namespace WebApi
 {
@@ -29,15 +31,23 @@ namespace WebApi
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {   
-            services.AddCors();           
+        {
+            services.AddCors();
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            services.AddSwaggerGen(c =>
+     {
+         c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+
+     });
+
+
+
             services.AddMvc(option => option.EnableEndpointRouting = false)
                 .AddNewtonsoftJson();
-            
+
             // configure jwt authentication
             var appSettings = appSettingsSection.Get<AppSettings>();
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);
@@ -76,6 +86,11 @@ namespace WebApi
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
 
             app.UseEndpoints(endpoints =>
             {
@@ -88,7 +103,7 @@ namespace WebApi
                 .AllowAnyHeader());
 
             app.UseAuthentication();
-            
+
             app.UseMvc();
         }
     }
